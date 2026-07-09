@@ -653,8 +653,15 @@
     .help-num{background:#9A6F16;color:#161615;}
 
     .install-btn{background:var(--weiss);}
+
+    /* Ergebnis-Board: .board-value nutzte var(--off-white), das im Dark Mode
+       zur dunklen Seitenhintergrundfarbe umdefiniert ist – dadurch wurde der
+       Text auf dem dunklen Board unsichtbar (schwarz auf schwarz). Fest
+       verdrahtete helle Farbe statt der wiederverwendeten Variable. */
     .board{background:#0D0D0C;}
     .board-label{color:var(--grau);}
+    .board-value{color:#F2F1ED;}
+    .board-value.highlight{color:var(--amber);}
 
     /* Hover-/Checked-Zustände nutzten fest verdrahtetes Hellrosa (#FFF3F3) –
        im Dark Mode durch ein dunkles Rot-Pendant ersetzt. */
