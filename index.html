@@ -634,22 +634,35 @@
     :root{
       --off-white:#161615;
       --weiss:#232321;
-      --anthrazit:#F2F1ED;
+      --anthrazit:#F5F4F1;
       --anthrazit-2:#2A2A28;
-      --grau:#A6A49C;
-      --grau-hell:#57564F;
+      --grau:#B8B6AE;
+      --grau-hell:#78766E;
       --border:#3A3936;
     }
     input[type="text"],.gps-btn,.seg-btn,.mode-toggle,.chip,.collapse{background:var(--weiss);color:var(--anthrazit);}
-    .collapse-help{background:#16233A;border-color:#2C4568;}
-    .collapse-help summary{color:#9CC4FF;}
-    .collapse-help summary::after{color:#6E9FDB;}
+
+    /* Anleitung: eigene Blau-Palette durch die Amber-Akzentfarbe der App ersetzt,
+       damit sie im Dark Mode nicht wie ein Fremdkörper wirkt. */
+    .collapse-help{background:#241D0F;border-color:#4A3A18;}
+    .collapse-help summary{color:#FFCB61;}
+    .collapse-help summary::after{color:#C99A3E;}
     .help-body{color:var(--anthrazit);}
-    .help-grid dt{color:#9CC4FF;}
-    .help-divider{border-top-color:#2C4568;}
-    .help-num{background:#3E6FA8;}
+    .help-grid dt{color:#FFCB61;}
+    .help-divider{border-top-color:#4A3A18;}
+    .help-num{background:#9A6F16;color:#161615;}
+
     .install-btn{background:var(--weiss);}
     .board{background:#0D0D0C;}
+    .board-label{color:var(--grau);}
+
+    /* Hover-/Checked-Zustände nutzten fest verdrahtetes Hellrosa (#FFF3F3) –
+       im Dark Mode durch ein dunkles Rot-Pendant ersetzt. */
+    .gps-btn:hover:not(:disabled){background:#2E1616;border-color:var(--rot);}
+    .ac-item:hover,.ac-item.active{background:#2E1616;color:#FF7A7A;}
+    .mode-toggle.checked{background:#2E1616;border-color:var(--rot);color:var(--anthrazit);}
+    .install-btn:hover{background:#2E1616;}
+    .gps-status.ok{color:#4ADE80;}
   }
 </style>
 </head>
@@ -1713,4 +1726,3 @@
 </script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                               
